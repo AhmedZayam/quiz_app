@@ -8,39 +8,48 @@ class HomeScreen extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: double.infinity,
-      color: const Color.fromARGB(255, 19, 68, 124),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            const Color.fromARGB(255, 40, 78, 159),
+            const Color.fromARGB(255, 16, 51, 128),
+          ],
+          begin: AlignmentGeometry.topCenter,
+          end: AlignmentGeometry.bottomCenter,
+        ),
+      ),
+
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        // mainAxisSize: MainAxisSize.min,
+        // mainAxisSize: MainAxisSize.max,
         children: [
           Image.asset(
             'assets/images/quiz-logo.png',
-            height: 300,
             width: 300,
             color: Color.fromARGB(255, 92, 149, 214),
             colorBlendMode: BlendMode.modulate,
           ),
-          SizedBox(height: 70),
+          const SizedBox(height: 80),
           const Text(
-            'Quiz App',
+            'Learn Flutter!',
             style: TextStyle(
               color: Color.fromARGB(255, 92, 149, 214),
-              fontSize: 30,
+              fontSize: 24,
               fontWeight: FontWeight.w500,
             ),
           ),
-          SizedBox(height: 20),
-          ElevatedButton(
+          const SizedBox(height: 30),
+          OutlinedButton(
             onPressed: () {
               // Add your logic here
               print('Quiz started!');
             },
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Color.fromARGB(255, 70, 116, 169),
+            style: OutlinedButton.styleFrom(
+              backgroundColor: const Color.fromARGB(255, 70, 116, 169),
               foregroundColor: Colors.white,
-              textStyle: TextStyle(fontSize: 15),
+              textStyle: const TextStyle(fontSize: 15),
             ),
-            child: Text('Press to start the quiz'),
+            child: const Text('Press to start the quiz'),
           ),
         ],
       ),
