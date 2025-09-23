@@ -8,16 +8,7 @@ class HomeScreen extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: double.infinity,
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            const Color.fromARGB(255, 40, 78, 159),
-            const Color.fromARGB(255, 16, 51, 128),
-          ],
-          begin: AlignmentGeometry.topCenter,
-          end: AlignmentGeometry.bottomCenter,
-        ),
-      ),
+      color: Colors.grey.shade100,
 
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -26,30 +17,26 @@ class HomeScreen extends StatelessWidget {
           Image.asset(
             'assets/images/quiz-logo.png',
             width: 300,
-            color: Color.fromARGB(255, 92, 149, 214),
-            colorBlendMode: BlendMode.modulate,
-          ),
+            color: Colors.grey.shade700,),
           const SizedBox(height: 80),
-          const Text(
+          Text(
             'Learn Flutter!',
             style: TextStyle(
-              color: Color.fromARGB(255, 92, 149, 214),
+              color: Colors.grey.shade700,
               fontSize: 24,
               fontWeight: FontWeight.w500,
             ),
           ),
           const SizedBox(height: 30),
-          OutlinedButton(
-            onPressed: () {
-              // Add your logic here
-              print('Quiz started!');
-            },
+          OutlinedButton.icon(
+            onPressed: () {},
             style: OutlinedButton.styleFrom(
-              backgroundColor: const Color.fromARGB(255, 70, 116, 169),
+              backgroundColor: Colors.grey.shade700,
               foregroundColor: Colors.white,
               textStyle: const TextStyle(fontSize: 15),
             ),
-            child: const Text('Press to start the quiz'),
+            icon: const Icon(Icons.arrow_right_alt),
+            label: const Text('Start Quiz'),
           ),
         ],
       ),
