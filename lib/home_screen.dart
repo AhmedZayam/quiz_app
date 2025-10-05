@@ -13,7 +13,6 @@ class HomeScreen extends StatelessWidget {
 
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        // mainAxisSize: MainAxisSize.max,
         children: [
           Image.asset(
             'assets/images/quiz-logo.png',
