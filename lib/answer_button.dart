@@ -12,9 +12,9 @@ class AnswerButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 40),
         backgroundColor: Colors.grey.shade700,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       ),
-      child: Text(answerText, style: TextStyle(color: Colors.white)),
+      child: Text(answerText, style: TextStyle(color: Colors.white), textAlign: TextAlign.center,),
     );
   }
 }
